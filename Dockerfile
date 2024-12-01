@@ -8,6 +8,7 @@ FROM eclipse-temurin:8-jdk-noble
 
 ENV http_proxy http://proxytst.yasarsap.astron.grp:3128
 ENV https_proxy http://proxytst.yasarsap.astron.grp:3128
+ENV no_proxy 10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.yasar.net,.yasar.grp
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
