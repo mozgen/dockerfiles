@@ -1,16 +1,12 @@
-#
-# NOTE: THIS DOCKERFILE IS GENERATED VIA "apply-templates.sh"
-#
-# PLEASE DO NOT EDIT IT DIRECTLY.
-#
-
-ENV http_proxy http://proxytst.yasarsap.astron.grp:3128
-ENV https_proxy http://proxytst.yasarsap.astron.grp:3128
-ENV no_proxy 10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.yasar.net,.yasar.grp
 # Tomcat 9 ve OpenJDK 8 tabanlı bir Dockerfile
 
 # Eclipse Temurin tabanlı OpenJDK 8 görüntüsünü kullanıyoruz
 FROM eclipse-temurin:8-jdk
+
+# Proxy ayarları
+ENV http_proxy http://proxytst.yasarsap.astron.grp:3128
+ENV https_proxy http://proxytst.yasarsap.astron.grp:3128
+ENV no_proxy 10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.yasar.net,.yasar.grp
 
 # Çevre değişkenleri
 ENV CATALINA_HOME /usr/local/tomcat
